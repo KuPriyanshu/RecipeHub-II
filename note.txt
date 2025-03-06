@@ -1,0 +1,24 @@
+Background Colors:
+
+#f8f8f8 → Used as the background color for the entire page (body).
+#ff6b6b → Used as the background color for the navbar and footer.
+#cfb6b6 → Used as the background color for recipe-card.
+
+
+Text Colors:
+
+#333 → Used as the default text color (body).
+white → Used as the text color in navbar, banner, and footer.
+#ffd166 → Used as hover color for navbar links and footer links.
+
+
+Card & Box Colors:
+
+white → Used as the background for home-recipe-card.
+#cfb6b6 → Used as the background color for recipe-card.
+
+
+Shadow & Border Colors:
+
+rgba(0, 0, 0, 0.1) → Used for box shadows in home-recipe-card and recipe-card.
+rgba(0, 0, 0, 0.5) → Used for banner::after overlay to darken background image.
