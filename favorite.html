@@ -55,14 +55,13 @@
                 return;
             }
     
-            // ✅ Sample Recipe Data (for matching images)
             const recipes = {
                 "Pasta Primavera": { image: "./image/pasta.jpg", link: "viewRecipePasta.html" },
                 "Classic Margherita Pizza": { image: "./image/pizza.jpg", link: "viewRecipePizza.html" },
                 "Gourmet Cheeseburger": { image: "./image/burger.jpg", link: "viewRecipeBurger.html" }
             };
     
-            // ✅ Display favorited recipes in card format
+            // Display favorited recipes in card format
             favorites.forEach(title => {
                 let recipe = recipes[title] || { image: "./image/default.jpg", link: "#" }; // ✅ Default image if not found
     
@@ -78,13 +77,13 @@
                 favoriteList.innerHTML += recipeCard;
             });
     
-            // ✅ Remove from favorites
+            //  Remove from favorites
             document.querySelectorAll(".remove-fav-btn").forEach(button => {
                 button.addEventListener("click", function () {
                     let title = button.getAttribute("data-title");
                     favorites = favorites.filter(fav => fav !== title);
                     localStorage.setItem("favorites", JSON.stringify(favorites));
-                    location.reload(); // ✅ Refresh to update list
+                    location.reload(); 
                 });
             });
         });
