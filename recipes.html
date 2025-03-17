@@ -1,63 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recipes - Recipe Hub</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="search.js"></script>
+    <script src="timer.js"></script>
+    <script src="script.js"></script>
 </head>
+
 <body>
     <nav class="navbar">
-        <h2>🍽️ Recipe Hub</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+
+        <div class="menu-icon" id="menuIcon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+            <h2>🍽️ Recipe Hub</h2>
+        </div>
+
+        <div class="search-container" id="searchContainer">
+            <input type="text" id="searchBar" placeholder="Search recipes...">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="nav-right">
+            <select id="filter">
+                <option value="no-filter">Select Filter</option>
+                <option value="all">All</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="fastfood">Fast Food</option>
+            </select>
+            <button id="searchIcon"><i class="fas fa-search"></i></button>
+            <button id="darkModeToggle">🌙</button>
+
+        </div>
     </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <i class="fas fa-times" id="closeSidebar"></i>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="recipes.html"><i class="fas fa-utensils"></i> Recipes</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="favorite.html"><i class="fas fa-heart"></i> Favorites</a></li>
+            <li id="sidebarFilter">
+                <h4>Filter Recipes</h4>
+                <select id="filterSidebar">
+                    <option value="no-filter">Select Filter</option>
+                    <option value="all">All</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="fastfood">Fast Food</option>
+                </select>
+            </li>
+        </ul>
+    </div>
 
     <section class="recipe-container">
         <div class="recipe-card">
             <img src="./image/pasta.jpg" alt="Pasta">
             <h3>Pasta Primavera</h3>
             <p class="curve-text">A colorful, fresh, and delicious pasta dish.</p>
-            <a href="viewRecipePasta.html" class="btn">View Recipe</a>
+            <div class="recipe-buttons">
+                <a href="viewRecipePasta.html" class="btn">View Recipe</a>
+                <button class="btn fav-btn" data-title="Pasta Primavera">🤍</button>
+            </div>
         </div>
-        <div class="recipe-card">
+        <div class=" recipe-card">
             <img src="./image/pizza.jpg" alt="Pizza">
             <h3>Classic Margherita Pizza</h3>
             <p class="curve-text">Simple, yet flavorful with fresh basil and mozzarella.</p>
-            <a href="viewRecipePizza.html" class="btn">View Recipe</a>
+            <div class="recipe-buttons">
+                <a href="viewRecipePizza.html" class="btn">View Recipe</a>
+                <button class="btn fav-btn" data-title="Classic Margherita Pizza">🤍</button>
+                <!-- Default white heart -->
+            </div>
         </div>
         <div class="recipe-card">
             <img src="./image/burger.jpg" alt="Burger">
             <h3>Gourmet Cheeseburger</h3>
             <p class="curve-text">Juicy beef patty with melted cheese and toppings.</p>
-            <a href="viewRecipeBurger.html" class="btn">View Recipe</a>
+            <div class="recipe-buttons">
+                <a href="viewRecipePizza.html" class="btn">View Recipe</a>
+                <button class="btn fav-btn" data-title="Gourmet Cheeseburger">🤍</button> 
+            </div>        
         </div>
         <div class="recipe-card">
             <img src="./image/pasta.jpg" alt="Pasta">
             <h3>Pasta Primavera</h3>
             <p class="curve-text">A colorful, fresh, and delicious pasta dish.</p>
-            <a href="viewRecipePasta.html" class="btn">View Recipe</a>
+            <div class="recipe-buttons">
+                <a href="viewRecipePasta.html" class="btn">View Recipe</a>
+                <button class="btn fav-btn" data-title="Pasta Primavera">🤍</button>
+            </div>
         </div>
-        <div class="recipe-card">
+        <div class=" recipe-card">
             <img src="./image/pizza.jpg" alt="Pizza">
             <h3>Classic Margherita Pizza</h3>
             <p class="curve-text">Simple, yet flavorful with fresh basil and mozzarella.</p>
-            <a href="viewRecipePizza.html" class="btn">View Recipe</a>
+            <div class="recipe-buttons">
+                <a href="viewRecipePizza.html" class="btn">View Recipe</a>
+                <button class="btn fav-btn" data-title="Classic Margherita Pizza">🤍</button>
+                <!-- Default white heart -->
+            </div>
         </div>
         <div class="recipe-card">
             <img src="./image/burger.jpg" alt="Burger">
             <h3>Gourmet Cheeseburger</h3>
             <p class="curve-text">Juicy beef patty with melted cheese and toppings.</p>
-            <a href="viewRecipeBurger.html" class="btn">View Recipe</a>
+            <div class="recipe-buttons">
+                <a href="viewRecipePizza.html" class="btn">View Recipe</a>
+                <button class="btn fav-btn" data-title="Gourmet Cheeseburger">🤍</button> 
+            </div>        
         </div>
+
     </section>
 
     <footer class="footer">
         <p>🍴 Crafted with love by Food Enthusiasts | &copy; 2025 Recipe Hub</p>
     </footer>
 </body>
+
 </html>

@@ -1,21 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Recipe - Classic Margherita Pizza</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>View Recipe - Gourmet Cheeseburger</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="search.js"></script>
+    <script src="timer.js"></script>
+    <script src="script.js"></script>
+
 </head>
+
 <body>
+
     <nav class="navbar">
-        <h2>🍽️ Recipe Hub</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+
+        <div class="menu-icon" id="menuIcon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="logo">
+            <h2>🍽️ Recipe Hub</h2>
+        </div>
+
+        <input type="number" id="timerInput" placeholder="Minutes" />
+        <button id="startTimer">Start Timer</button>
+        <p id="timerDisplay"></p>
+        <div class="nav-right">
+            <button id="darkModeToggle">🌙</button>
+
+        </div>
     </nav>
+
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <i class="fas fa-times" id="closeSidebar"></i>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="recipes.html"><i class="fas fa-utensils"></i> Recipes</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="favorite.html"><i class="fas fa-heart"></i> Favorites</a></li>
+        </ul>
+    </div>
 
     <div class="recipe-details">
         <img src="./image/pizza.jpg" alt="Classic Margherita Pizza">
@@ -23,17 +53,17 @@
         <p class="curve-text">A simple yet flavorful pizza topped with fresh basil, mozzarella, and tomato sauce.</p>
 
         <h2>Ingredients</h2>
-        <ul>
-            <li>1 Pizza Dough</li>
-            <li>1/2 Cup Tomato Sauce</li>
-            <li>1 Cup Fresh Mozzarella</li>
-            <li>Fresh Basil Leaves</li>
-            <li>1 tbsp Olive Oil</li>
-            <li>Salt & Pepper to taste</li>
+        <ul id="ingredient-list">
+            <li><input type="checkbox" />1 Pizza Dough</li>
+            <li><input type="checkbox" />1/2 Cup Tomato Sauce</li>
+            <li><input type="checkbox" />1 Cup Fresh Mozzarella</li>
+            <li><input type="checkbox" />Fresh Basil Leaves</li>
+            <li><input type="checkbox" />1 tbsp Olive Oil</li>
+            <li><input type="checkbox" />Salt & Pepper to taste</li>
         </ul>
 
         <h2>Instructions</h2>
-        <ol>
+        <ol id="recipeSteps">
             <li>Preheat oven to 220°C (425°F).</li>
             <li>Roll out pizza dough on a floured surface.</li>
             <li>Spread tomato sauce evenly over the dough.</li>
